@@ -13,12 +13,12 @@ public class App {
         System.out.print("사칙연산 기호를 입력하세요: ");
         String operator = sc.next();
         String more= "";
-        do {
+        while (!more.equals("exit")) {
             Calculator calculator = new Calculator(num1,num2,operator);
             calculator.operate(calculator.operator);
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             more = sc.next();
-        }while (!more.equals("exit"));
+        }
         System.out.println("계산을 종료합니다.");
     }
 }
