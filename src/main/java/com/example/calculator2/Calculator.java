@@ -5,9 +5,19 @@ import java.util.Queue;
 
 public class Calculator {
     private Queue<Integer>answerque = new LinkedList<>();
+    int num1;
+    int num2;
+    String operator;
 
+    public Calculator(){}
 
     public Calculator(int num1, int num2, String operator) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.operator = operator;
+    }
+
+    public void calculate(){
         int answer = 0;
 
         switch (operator) {
@@ -24,6 +34,8 @@ public class Calculator {
         }
     }
 
+
+
     public void removeResult() {
         answerque.poll();
     }
@@ -36,6 +48,30 @@ public class Calculator {
 
     public void setAnswerque(Queue<Integer> answerque) {
         this.answerque = answerque;
+    }
+
+    public int getNum1() {
+        return num1;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 }
 
